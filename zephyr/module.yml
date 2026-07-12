@@ -1,0 +1,4 @@
+name: zmk-keyboard-macropad-9
+build:
+  settings:
+    board_root: .
