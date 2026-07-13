@@ -3,32 +3,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        On_Off: On_Off {
-            compatible = "zmk,behavior-soft-off";
-            label = "ON_OFF";
-            #binding-cells = <0>;
-            hold-time-ms = <5000>;
-        };
-
-        OnOffMT: OnOffMT {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ONOFFMT";
-            bindings = <&On_Off>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-&kp PAGE_UP   &kp PAGE_DOWN  &OnOffMT 0 C_PLAY_PAUSE
+&kp PAGE_UP   &kp PAGE_DOWN  &kp C_PLAY_PAUSE
 &kp C_VOL_DN  &kp UP_ARROW   &kp C_VOLUME_UP
 &kp LEFT      &kp DOWN       &lt 1 RIGHT
             >;
