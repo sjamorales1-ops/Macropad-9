@@ -1,2 +1,2 @@
-config SHIELD_MACROPAD_9
-    def_bool $(shields_list_contains,macropad_9)
+config SHIELD_MACROPAD_9DIRECT
+    def_bool $(shields_list_contains,macropad_9direct)
