@@ -1,4 +1,4 @@
-#include "macropad_9direct-layouts.dtsi"
+#include "macro_9direct-layouts.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -14,7 +14,7 @@
     };
 };
 
-&physical_layout_macropad_9direct {
+&physical_layout_macro_9direct {
     transform = <&matrix_transform0>;
 };
 

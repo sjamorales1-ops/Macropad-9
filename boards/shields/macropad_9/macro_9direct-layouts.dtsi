@@ -1,9 +1,9 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout_macropad_9direct: physical_layout_macropad_9direct {
+    physical_layout_macro_9direct: physical_layout_macro_9direct {
         compatible = "zmk,physical-layout";
-        display-name = "macropad-9direct";
+        display-name = "macro-9direct";
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             , <&key_physical_attrs 100 100  100    0       0   100     0>

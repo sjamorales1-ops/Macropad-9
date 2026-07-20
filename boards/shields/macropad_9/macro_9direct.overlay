@@ -1,4 +1,4 @@
-#include "macropad_9direct.dtsi"
+#include "macro_9direct.dtsi"
 
 / {
     kscan0: kscan0 {
@@ -18,8 +18,7 @@
             ;
     };
 };
-
-&physical_layout_macropad_9direct {
+&physical_layout_macro_9direct {
     kscan = <&kscan0>;
 };
 

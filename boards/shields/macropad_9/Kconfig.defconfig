@@ -1,7 +1,7 @@
-if SHIELD_MACROPAD_9DIRECT
+if SHIELD_MACRO_9DIRECT
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "macropad-9direct"
+    default "macro-9direct"
 
 endif
