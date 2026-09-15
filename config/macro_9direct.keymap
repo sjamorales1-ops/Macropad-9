@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&lt {
+    tapping-term-ms = <250>;
+    flavor = "hold-preferred";
+};
+
 / {
     macros {
         Lock: Lock {
@@ -11,11 +16,11 @@
             label = "LOCK";
         };
 
-        Back: Back {
+        Home: Home {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LG(ENTER)>;
-            label = "BACK";
+            label = "Home";
         };
 
         close: close {
@@ -51,6 +56,13 @@
 
             label = "PW";
         };
+
+        Back: Back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(DELETE)>;
+            label = "BACK";
+        };
     };
 
     keymap {
@@ -59,9 +71,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp PAGE_UP  &kp ENTER       &kp PAGE_DOWN
-&kp F7       &lt 2 UP_ARROW  &kp F8
-&kp LEFT     &lt 1 DOWN      &kp RIGHT
+&kp PAGE_UP   &kp ENTER       &kp PAGE_DOWN
+&kp LS(LEFT)  &lt 2 UP_ARROW  &kp LS(RIGHT)
+&lt 4 LEFT    &lt 1 DOWN      &lt 3 RIGHT
             >;
         };
 
@@ -75,17 +87,17 @@
 
         layer_2 {
             bindings = <
-&close   &Back   &Lock
+&close   &Home   &Lock
 &AltTab  &trans  &PW
-&trans   &trans  &trans
+&none    &Back   &none
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans
-&trans  &trans  &trans
-&trans  &trans  &trans
+&none  &none  &none
+&none  &none  &none
+&none  &none  &none
             >;
         };
 
